@@ -142,9 +142,9 @@
         </section>
 
         <section id="skills-2">
-            <h2>Even More Skills</h2>
+            <h2 class="heading"><u>_Even More Skills_</u></h2>
             <ul>
-                
+
             </ul>
         </section>
 
@@ -169,6 +169,28 @@
                 <a class="link" href="https://github.com/shenkoshenkoshenko"> <img class="icon" src="images/git-icon.png" alt="GitHub icon"> </a>
                 <a class="link" href="https://www.youtube.com/watch?v=JxS5E-kZc2s"> <img class="icon" src="images/linkedin-icon.png" alt="LinkedIn icon"> </a>
             </div>
+        </section>
+
+        <section id="message-form-section">
+            <h2 class="heading"><u>_Send Me a Haiku_</u></h2>
+            <form name="haiku" class="message-form">
+                <label for="usersName">Your Name:<br></label>
+                <input type="text" id="usersName" required="true"
+                /><br />
+                <label for="usersEmail">Your Email:<br></label>
+                <input type="email" id="usersEmail" required="true"
+                /><br />
+                <label for="usersMessage">Write Your Haiku Here:<br></label>
+                <textarea name="usersMessage" id="usersMessage" required="true"
+                ></textarea>
+                <br />
+                <button type="submit" value="submit" name="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+
+        <section id="message-section">
+            <h2 class="heading">Haikus</h2>
+            <ul id="messages"></ul>
         </section>
 
         <script src="js/index.js">
