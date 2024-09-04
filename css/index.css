@@ -95,7 +95,7 @@ h1 {
     font-weight: bold;
 }
 
-#experience, #skills, #projects {
+#experience, #skills, #projects, #message-form-section {
     padding: 1rem;
     margin-bottom: 10%;
     scroll-margin-top: 5rem;
@@ -177,6 +177,18 @@ h1 {
     border-radius: 30%;
 }
 
+/*********************Message Section*********************/
+
+#message-form-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+/*********************Media Section*********************/
+
 @media (min-width: 601px) {
     body {
         font-size: 1rem;
@@ -203,7 +215,7 @@ h1 {
         border-bottom-right-radius: 25%;
         }
 
-    #about, #experience, #skills, #projects, #connect {
+    #about, #experience, #skills, #projects, #connect, #message-form-section, #message-section {
         max-width: 80%;
     }
 
