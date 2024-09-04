@@ -39,8 +39,8 @@ for (let i = 0; i < skillz.length; i++) {
 
 
 let messageForm = document.querySelector("[name='haiku']");
-let messageSection = document.getElementById('message-section');
-let messageList = messageSection.querySelector('ul');
+let messageSection = document.getElementById("message-section");
+let messageList = messageSection.querySelector("ul");
 messageSection.hidden = true;
 
 
@@ -137,3 +137,33 @@ function makeEditButton() {
     });
     return editButton;
 }
+
+
+//getting info from GitHub via Fetch and sticking it in the elements
+
+
+fetch("https://api.github.com/users/shenkoshenkoshenko/repos")
+    .then((response) => {
+        if (response.ok) {
+            return response.text();
+        } else {
+        throw new Error("Whoops!  We've got an error!");
+        }
+    })
+    .then((data) => {
+        const repositories = JSON.parse(data);
+        console.log(repositories);
+
+        const projectSection = document.getElementById("projects-box");
+        let projectList = projectSection.querySelector("ul");
+        projectSection.appendChild(projectList);
+
+        for(let repository of repositories) {
+            let project = document.createElement("li");
+            project.innerText = repository.name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch((error) => {
+        console.error("Try again later...", error.message)
+    });
