@@ -24,7 +24,7 @@ foot.appendChild(copyright);
 //new skills section and list, function that creates a bulleted list
 
 
-const skillz = ["Oxygen Consumption", "Food Consumption", "Carbon Production", "Vibe Dampening"];
+const skillz = ["Oxygen consumption", "Levitation (underwater only)", "Carbon production", "Encyclopedic knowledge of Yes lyrics", "Three tacos in a single sitting", "Usually a pretty nice guy"];
 const skillsSection = document.querySelector("#skills-2");
 const skillsList = skillsSection.querySelector("ul");
 
