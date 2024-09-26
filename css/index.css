@@ -177,6 +177,15 @@ h1 {
     margin:0;
 }
 
+.proj-link {
+    color: whitesmoke;
+}
+
+.proj-link:hover {
+    font-weight: bold;
+    color: black;
+}
+
 /*********************Connect Section*********************/
 
 #connect {

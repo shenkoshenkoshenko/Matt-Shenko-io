@@ -160,7 +160,7 @@ fetch("https://api.github.com/users/shenkoshenkoshenko/repos")
 
         for(let repository of repositories) {
             let project = document.createElement("li");
-            project.innerText = repository.name;
+            project.innerHTML = `<a class="proj-link" href="${repository.html_url}">${repository.name}</a>`;
             projectList.appendChild(project);
         }
     })
