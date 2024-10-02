@@ -129,7 +129,7 @@ function makeEditButton() {
             let newEntry = document.createElement('li');
             newEntry.classList.add('message-item');
             newEntry.setAttribute('id', uid);
-            newEntry.innerHTML = `<a href="mailto:${entryByID[uid].usersEmail}">${entryByID[uid].usersName}</a><span> wrote: ${entryByID[uid].usersMessage}</span>`;
+            newEntry.innerHTML = `<a href="mailto:${entryByID[uid].usersEmail}">${entryByID[uid].usersName}</a><span> wrote:<br> ${entryByID[uid].usersMessage}</span>  `;
             newEntry.appendChild(makeEditButton());
             newEntry.appendChild(makeRemoveButton());
             entry.parentNode.replaceChild(newEntry, entry);
@@ -152,7 +152,7 @@ fetch("https://api.github.com/users/shenkoshenkoshenko/repos")
     })
     .then((data) => {
         const repositories = JSON.parse(data);
-        console.log(repositories);
+        //console.log(repositories);
 
         const projectSection = document.getElementById("projects-box");
         let projectList = projectSection.querySelector("ul");
