@@ -24,7 +24,7 @@ foot.appendChild(copyright);
 //new skills section and list, function that creates a bulleted list
 
 
-const skillz = ["Python (1 year)", "Levitation (underwater only)", "JavaScript (<1 year)", "Encyclopedic knowledge of Yes lyrics", "Three tacos in a single sitting", "HTML + CSS (< 1 year)"];
+const skillz = ["Python (1 year)", "Levitation (underwater only)", "JavaScript (<1 year)", "Encyclopedic knowledge of Yes lyrics", "Network Administration (5+ years)", "Three tacos in a single sitting", "HTML + CSS (< 1 year)"];
 const skillsSection = document.querySelector("#skills-box");
 
 for (let i = 0; i < skillz.length; i++) {
