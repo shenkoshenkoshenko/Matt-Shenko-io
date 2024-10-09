@@ -24,23 +24,53 @@ foot.appendChild(copyright);
 //new skills section and list, function that creates a bulleted list
 
 
-const skillz = ["Oxygen Consumption", "Food Consumption", "Carbon Production", "Vibe Dampening"];
-const skillsSection = document.querySelector("#skills-2");
-const skillsList = skillsSection.querySelector("ul");
+const skillz = ["Python (1 year)", "Levitation (underwater only)", "JavaScript (<1 year)", "Encyclopedic knowledge of Yes lyrics", "Three tacos in a single sitting", "HTML + CSS (< 1 year)"];
+const skillsSection = document.querySelector("#skills-box");
 
 for (let i = 0; i < skillz.length; i++) {
-    let skill = document.createElement('li');
-    skill.innerHTML = skillz[i];
-    skillsList.appendChild(skill);
+    let skillBubble = document.createElement('ul');
+    skillBubble.classList.add("skill-item");
+    skillsSection.appendChild(skillBubble);
+    skillBubble.innerHTML = skillz[i];
 };
+
+
+//getting info from GitHub via Fetch and sticking it in the elements
+
+
+fetch("https://api.github.com/users/shenkoshenkoshenko/repos")
+    .then((response) => {
+        if (response.ok) {
+            return response.text();
+        } else {
+        throw new Error("Whoops!  We've got an error!");
+        }
+    })
+    .then((data) => {
+        const repositories = JSON.parse(data);
+        //console.log(repositories);
+
+        const projectSection = document.getElementById("projects-box");
+        let projectList = projectSection.querySelector("ul");
+        projectSection.appendChild(projectList);
+
+        for(let repository of repositories) {
+            let project = document.createElement("li");
+            project.innerHTML = `<a class="proj-link" href="${repository.html_url}">${repository.name}</a>`;
+            projectList.appendChild(project);
+        }
+    })
+    .catch((error) => {
+        console.error("Try again later...", error.message)
+    });
 
 
 //message section
 
 
 let messageForm = document.querySelector("[name='haiku']");
-let messageSection = document.getElementById('message-section');
-let messageList = messageSection.querySelector('ul');
+let messageSection = document.getElementById("message-section");
+let messageList = messageSection.querySelector("ul");
 messageSection.hidden = true;
 
 
@@ -129,7 +159,7 @@ function makeEditButton() {
             let newEntry = document.createElement('li');
             newEntry.classList.add('message-item');
             newEntry.setAttribute('id', uid);
-            newEntry.innerHTML = `<a href="mailto:${entryByID[uid].usersEmail}">${entryByID[uid].usersName}</a><span> wrote: ${entryByID[uid].usersMessage}</span>`;
+            newEntry.innerHTML = `<a href="mailto:${entryByID[uid].usersEmail}">${entryByID[uid].usersName}</a><span> wrote:<br> ${entryByID[uid].usersMessage}</span>  `;
             newEntry.appendChild(makeEditButton());
             newEntry.appendChild(makeRemoveButton());
             entry.parentNode.replaceChild(newEntry, entry);

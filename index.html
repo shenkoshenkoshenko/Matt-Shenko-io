@@ -9,25 +9,33 @@
     </head>
     <body>
 
+
+
         <nav id="navigation">
-            <a class="nav-link" href="#rooster-pic">About</a>
+            <a class="nav-link" href="#title">About</a>
             <a class="nav-link" href="#experience">Experience</a>
             <a class="nav-link" href="#skills">Skills</a>
             <a class="nav-link" href="#projects">Projects</a>
             <a class="nav-link" href="#connect">Say Hello</a>
         </nav>
-        <h1><u>_Matt Shenko_</u></h1>
+        <h1 id="title"><u>_Matt Shenko_</u></h1>
+
 
 
         <section id="about">
             <img id="rooster-pic" src="images/jack-bw.JPG" alt="Jack Nicholson the Rooster keeping watch in tall grass">
             <div>
                 <h2 class="heading"><u>_About_</u></h2>
-                <p>Born in Oregon, I've lived and worked in New York, New Jersey, Maryland, and now West Virginia.</p>
-                <p>In my spare time I enjoy gardening, green tea, good books, photography, hiking, and spending time with my wife and cats.  That rooster in the picture?  That's Jack Nicholson.  I do not enjoy spending time with him.</p>
+                <div id="about-para">
+                    <p>Born in Oregon, I've lived and worked in New York, New Jersey, Maryland, and now West Virginia.</p>
+                <p>In my spare time I enjoy gardening, green tea, good books, photography, hiking, and spending time with my wife and cats.  
+                    That rooster in the picture?  That's Jack Nicholson.  I do not enjoy spending time with him.</p>
                 <p>Currently enrolled in Code The Dream's Io web development program.</p>
+                </div>
+                
             </div>
         </section>
+
 
 
         <section id="experience">
@@ -77,6 +85,7 @@
                 </div>
             </div>
         </section>
+
 
 
         <section id="skills">
@@ -141,25 +150,32 @@
             </div>
         </section>
 
+
+
         <section id="skills-2">
             <h2 class="heading"><u>_Even More Skills_</u></h2>
-            <ul>
+            <div class="skills-box">
+                <div class="skill-item">
+                    <ul class="bullets">
 
-            </ul>
+                    </ul>
+                </div>
+            </div>
         </section>
+
 
 
         <section id="projects">
             <h2 class="heading"><u>_Projects_</u></h2>
             <div class="project-box">
-                <div class="project-item">
-                    <h3>Well...</h3>
+                <div class="project-item" id="projects-box">
                     <ul class="bullets">
-                        <li>Just you wait</li>
+
                     </ul>
                 </div>
             </div>
         </section>
+
 
 
         <section id="connect">
@@ -170,6 +186,8 @@
                 <a class="link" href="https://www.youtube.com/watch?v=JxS5E-kZc2s"> <img class="icon" src="images/linkedin-icon.png" alt="LinkedIn icon"> </a>
             </div>
         </section>
+
+
 
         <section id="message-form-section">
             <h2 class="heading"><u>_Send Me a Haiku_</u></h2>
@@ -188,14 +206,20 @@
             </form>
         </section>
 
+
+
         <section id="message-section">
             <h2 class="heading">Haikus</h2>
             <ul id="messages"></ul>
         </section>
 
+
+
         <script src="js/index.js">
 
         </script>
+
+
     
     </body>
 </html>
