@@ -24,14 +24,14 @@ foot.appendChild(copyright);
 //new skills section and list, function that creates a bulleted list
 
 
-const skillz = ["Oxygen consumption", "Levitation (underwater only)", "Carbon production", "Encyclopedic knowledge of Yes lyrics", "Three tacos in a single sitting", "Usually a pretty nice guy"];
-const skillsSection = document.querySelector("#skills-2");
-const skillsList = skillsSection.querySelector("ul");
+const skillz = ["Python (1 year)", "Levitation (underwater only)", "JavaScript (<1 year)", "Encyclopedic knowledge of Yes lyrics", "Three tacos in a single sitting", "HTML + CSS (< 1 year)"];
+const skillsSection = document.querySelector("#skills-box");
 
 for (let i = 0; i < skillz.length; i++) {
-    let skill = document.createElement('li');
-    skill.innerHTML = skillz[i];
-    skillsList.appendChild(skill);
+    let skillBubble = document.createElement('ul');
+    skillBubble.classList.add("skill-item");
+    skillsSection.appendChild(skillBubble);
+    skillBubble.innerHTML = skillz[i];
 };
 
 
